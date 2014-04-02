@@ -1,22 +1,15 @@
 /*
-*
-*	To projekt samej gry
-*
-*/
-#include <SFML\Graphics.hpp>
+ *
+ *	To projekt samej gry
+ *
+ */
+#include "Scene.h"
+#include "Menu.h"
 
 int main()
-{
-	sf::RenderWindow window(sf::VideoMode(1024, 600), "SFML works!");
-	while (window.isOpen()) {
-		sf::Event event;
-		while (window.pollEvent(event)) {
-			if (event.type == sf::Event::Closed)
-				window.close();
-		}
-		window.clear();
-		window.display();
-	}
+{	
+	Scene *game = new Menu();
+	game->run();
 	return 0;
 }
 
